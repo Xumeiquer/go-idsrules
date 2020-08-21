@@ -275,6 +275,9 @@ func (r *RuleReader) readLine() (string, error) {
 	if err != nil && len(bytes) == 0 {
 		return "", err
 	}
+	if bytes[0] == '#' {
+		return "", nil
+	}
 	return strings.TrimSpace(string(bytes)), nil
 }
 
