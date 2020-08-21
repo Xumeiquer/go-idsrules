@@ -49,7 +49,7 @@ func trimQuotes(buf string) string {
 
 // Remove leading white space from a string.
 func trimLeadingWhiteSpace(buf string) string {
-	return strings.TrimLeft(buf, " ")
+	return strings.TrimSpace(buf)
 }
 
 func splitAt(buf string, sep string) (string, string) {
